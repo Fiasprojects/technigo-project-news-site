@@ -10,4 +10,4 @@ If I had more time I would add more articles to the main page and also create mo
 
 ## View it live
 
-link will be here
+See the website here: https://thepurringpress.netlify.app/

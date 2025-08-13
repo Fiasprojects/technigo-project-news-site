@@ -10,5 +10,4 @@ If I had more time I would add more articles to the main page and also create mo
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-Making a simple change to test how this works yay fun.
+link will be here

@@ -1,4 +1,358 @@
-html {
-  background: #0025ff;
+/* Basic Reset: Remove default margin and padding, set box-sizing to border-box for easier sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body: Set global font family, weight, style, background and text color */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fefaf6;
+  color: #333;
+}
+
+/* Headings h1, h2, h3: Use the fun "Luckiest Guy" font for titles */
+h1,
+h2,
+h3 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Header styling */
+.site-header {
+  grid-area: header; /* place in CSS grid */
+  background-color: #ffe0e9;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; /* stack logo and nav vertically */
+  align-items: center;
+  gap: 0.5rem; /* spacing between logo and navbar */
+}
+
+/* Logo styles */
+.logo {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.5rem; /* large and prominent */
+  color: #ff6f61; /* warm coral */
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #000; /* playful outline effect */
+  letter-spacing: 1px; /* improve readability */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between emoji and text */
+}
+
+/* Navbar list styling */
+.navbar ul {
+  list-style: none; /* remove bullets */
+  display: flex; /* horizontal menu */
+  gap: 1.5rem; /* space between items */
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar links */
+.navbar a {
+  text-decoration: none; /* remove underline */
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px; /* rounded edges */
+  transition: color 0.3s ease, background-color 0.3s ease; /* smooth hover */
+}
+
+/* Navbar hover effect */
+.navbar a:hover {
+  color: #d94f4f; /* coral-ish */
+  background-color: #ffe6e6; /* light coral bg */
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(217, 79, 79, 0.3); /* subtle shadow */
+}
+
+/* Main content grid setup */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* wider main column + narrower sidebar */
+  grid-template-areas:
+    "bignews asidenews"
+    "secondnews asidenews"
+    "extras extras"; /* full width row for extras */
+  gap: 1rem;
+  max-width: 1000px; /* max content width */
+  margin: 0 auto; /* center horizontally */
+  padding: 1rem;
+}
+
+/* Big news block */
+.bignews {
+  grid-area: bignews;
+  background: #ffe0e9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Second news block */
+.secondnews {
+  grid-area: secondnews;
+  background: #fff8dc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Extras section (grid of 4 items) */
+.extras {
+  grid-area: extras;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* four equal columns */
+  gap: 1rem;
+}
+
+/* Each article in extras */
+.extras article {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Extras images: fill width, fixed height, cover with cropping */
+.extras img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* maintain aspect ratio, crop if needed */
+  border-radius: 8px;
+  display: block; /* remove image bottom space */
+}
+
+/* Link styles for h1 */
+h1 a {
+  color: #333; /* normal color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on h1 links */
+h1 a:hover {
+  color: #d94f4f;
+  text-decoration: underline;
+}
+
+/* Link styles for h2 */
+h2 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on h2 links */
+h2 a:hover {
+  color: #d94f4f;
+  text-decoration: underline;
+}
+
+/* Sidebar / aside news */
+.asidenews {
+  grid-area: asidenews;
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Sidebar headings spacing */
+.asidenews h2 {
+  margin-bottom: 0.25em; /* spacing between heading and text */
+}
+
+/* Sidebar paragraphs spacing */
+.asidenews p {
+  margin-bottom: 1.5em; /* spacing after each news block */
+}
+
+/* Sidebar images */
+.asidenews img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Images for bignews and secondnews */
+.bignews img,
+.secondnews img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+/* Newsletter signup container */
+.newsletter-signup {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background-color: #ffe0e9;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Newsletter heading */
+.newsletter-signup h2 {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #d94f4f;
+}
+
+/* Newsletter paragraph */
+.newsletter-signup p {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Newsletter form layout */
+.newsletter-signup form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Email input styles */
+.newsletter-signup input[type="email"] {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid #d94f4f;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline-offset: 2px;
+}
+
+/* Email input focus style */
+.newsletter-signup input[type="email"]:focus {
+  border-color: #ff6f61;
+}
+
+/* Submit button styles */
+.newsletter-signup button {
+  background-color: #d94f4f;
   color: #fff;
+  border: none;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+.newsletter-signup button:hover {
+  background-color: #ff6f61;
+}
+
+/* Footer styles */
+.site-footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffe0e9;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Social links container */
+.social-links {
+  margin-top: 0.5rem;
+}
+
+/* Social link styles */
+.social-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: #d94f4f;
+  transition: color 0.3s ease;
+}
+
+/* Social link hover effect */
+.social-links a:hover {
+  color: #ff6f61;
+}
+
+/* Media queries */
+
+/* Mobile: 1 column layout */
+@media (max-width: 767px) {
+  main {
+    display: block;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .bignews,
+  .secondnews,
+  .asidenews,
+  .extras {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .extras {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-signup {
+    max-width: 100%;
+    margin: 2rem 1rem;
+  }
+}
+
+/* Tablet: 2 column layout */
+@media (min-width: 768px) and (max-width: 999px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "bignews asidenews"
+      "secondnews asidenews"
+      "extras extras";
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .bignews {
+    grid-area: bignews;
+  }
+
+  .secondnews {
+    grid-area: secondnews;
+  }
+
+  .asidenews {
+    grid-area: asidenews;
+  }
+
+  .extras {
+    grid-area: extras;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter-signup {
+    max-width: 900px;
+    margin: 2rem auto;
+  }
 }

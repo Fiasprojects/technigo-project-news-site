@@ -1,23 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- Change the title below -->
-    <title>News Site</title>
+    <title>The Purring Press 🐱 – All the Latest in Feline Affairs</title>
+
+    <!-- Preconnect to Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load Luckiest Guy font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Luckiest Guy and Poppins fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="./style.css" />
-    <!-- dont forget the meta tag for responsiveness -->
+    <!-- Responsive meta tag for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
   <body>
-    <header>
-      <!-- Some kind of logo and navbar -->
+    <!-- Site header containing logo and navigation -->
+    <header class="site-header">
+      <div class="logo">🐾The Purring Press</div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Breaking Meows</a></li>
+          <li><a href="#">Purrlitics</a></li>
+          <li><a href="#">Fur-tainmen</a></li>
+          <li><a href="#">Cat Tech</a></li>
+          <li><a href="#">Whisker Wisdom</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="big-news">
-      <!-- The big news content -->
+    <!-- Main content area -->
+    <main>
+      <!-- Big featured news story -->
+      <section class="bignews">
+        <img src="assets/mouse.jpg" alt="Mouse in the pantry" />
+        <h1>
+          <a href="#">Mice Spotted in Pantry — Stealth Training Recommended</a>
+        </h1>
+        <p>
+          Late last night, multiple mice were reportedly seen darting through
+          the kitchen pantry. Surveillance (aka, the cat watching from the
+          counter) confirms they were quick, sneaky, and utterly disrespectful.
+        </p>
+      </section>
+
+      <!-- Second featured news story -->
+      <section class="secondnews">
+        <img src="assets/tuna-can.jpg" alt="Tuna can" />
+        <h1><a href="#">Human Opens Tuna Can… But It’s for Themselves</a></h1>
+        <p>
+          In a shocking betrayal, local feline Whiskers was lured to the kitchen
+          by the unmistakable sound of a tuna can being opened.
+        </p>
+      </section>
+
+      <!-- Sidebar news with smaller articles -->
+      <section class="asidenews">
+        <img src="assets/catnip.jpg" alt="Catnip" />
+        <h2><a href="#">Top 10 Catnip Brands Reviewed</a></h2>
+        <p>Which one makes you bounce off the walls the fastest?</p>
+        <img src="assets/cat -treats.jpg" alt="Cat gets treats" />
+        <h2><a href="#">How to Train Your Hooman</a></h2>
+        <p>Tips and tricks from senior cats for getting more treats.</p>
+      </section>
+
+      <!-- Grid of additional news articles -->
+      <section class="extras">
+        <article>
+          <img src="assets/cat-night.jpg" alt="Cat zoomies" />
+          <h3>Midnight Zoomies Sweep the Neighborhood</h3>
+          <p>
+            Cats everywhere are caught racing through homes at top speed —
+            experts say it’s prime playtime energy!
+          </p>
+        </article>
+        <article>
+          <img src="assets/cat-treats.jpg" alt="free cat treats" />
+          <h3>New Cat Café Opens with Unlimited Treats</h3>
+          <p>
+            Purr-fect hangout spot for cats and humans alike, featuring
+            tuna-flavored lattes and cozy napping spots.
+          </p>
+        </article>
+        <article>
+          <img src="assets/cat-hat.jpg" alt="cat hat fashion" />
+          <h3>Feline Fashion: Tiny Hats Take Over Instagram</h3>
+          <p>
+            From berets to beanies, cats are styling up with the cutest headwear
+            trends this season.
+          </p>
+        </article>
+        <article>
+          <img src="assets/cat-laser.jpg" alt="cat playing" />
+          <h3>Laser Pointer Craze Reaches New Heights</h3>
+          <p>
+            The obsession continues as cats everywhere chase the elusive red dot
+            in record-breaking zoomies sessions.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Newsletter signup section -->
+    <section class="newsletter-signup">
+      <h2>Stay in the Loop!</h2>
+      <p>Get the latest purrfect news delivered straight to your inbox.</p>
+      <form>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email address"
+          required
+          aria-label="Email address"
+        />
+        <button type="submit">Subscribe</button>
+      </form>
     </section>
 
-    <section class="">
-      <!-- The other news  -->
-    </section>
+    <!-- Footer with copyright and social media links -->
+    <footer class="site-footer">
+      <p>© 2025 CatNews Network – Powered by Tuna</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">👍</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="Etsy">🛍️</a>
+      </div>
+    </footer>
   </body>
 </html>
